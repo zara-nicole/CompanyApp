@@ -31,7 +31,7 @@ export default class App extends React.Component{
   addRandomUser = () => {
     const user = {
       id: faker.random.number(),
-      name: faker.name.firstName()
+      name: faker.company.companyName()
     };
     this.addUser(user);
   }
