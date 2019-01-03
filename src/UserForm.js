@@ -26,9 +26,9 @@ export default class UserForm extends React.Component{
           <input onChange={ changeName } className='input-control' value={ name }/>
         </div>
        <div style={ { marginBottom: '10px' } } >
-        <button onClick={ addUser } className='btn btn-warning' disabled={ inValid }>Add User</button>
+        <button onClick={ addUser } className='btn btn-warning' disabled={ inValid }>Add a Company</button>
         { ' ' }
-        <button onClick={ addRandomUser } className='btn btn-primary'>Create A User</button>
+        <button onClick={ addRandomUser } className='btn btn-primary'>Create A Company</button>
       </div>
       </div>
     );
