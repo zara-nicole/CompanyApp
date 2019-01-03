@@ -28,7 +28,7 @@ export default class UserForm extends React.Component{
        <div style={ { marginBottom: '10px' } } >
         <button onClick={ addUser } className='btn btn-warning' disabled={ inValid }>Add a Company</button>
         { ' ' }
-        <button onClick={ addRandomUser } className='btn btn-primary'>Create A Company</button>
+        <button onClick={ addRandomUser } className='btn btn-primary'>Create a Company</button>
       </div>
       </div>
     );
