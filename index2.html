@@ -45,9 +45,9 @@
               <input onChange={ changeName } className='input-control' value={ name }/>
             </div>
            <div style={ { marginBottom: '10px' } } >
-            <button onClick={ addUser } className='btn btn-warning' disabled={ inValid }>Add User</button>
+            <button onClick={ addUser } className='btn btn-warning' disabled={ inValid }>Add Company</button>
             { ' ' }
-            <button onClick={ addRandomUser } className='btn btn-primary'>Create A User</button>
+	    <button onClick={ addRandomUser } className='btn btn-primary'>Create A Company</button>
           </div>
           </div>
         );
@@ -79,7 +79,7 @@
 
       }
       addRandomUser = () => {
-        const user = {Jerry
+        const user = {
           id: faker.random.number(),
           name: faker.company.companyName()
         };
@@ -117,8 +117,8 @@
 */
 
     const users = [
-      { id: 1, name: 'GiveDirectly' },
-      { id: 2, name: 'Watsi' },
+      { id: 1, name: 'Watsi' },
+      { id: 2, name: 'GiveDirectly' },
       { id: 3, name: 'Zenysis' },
     ];
 
