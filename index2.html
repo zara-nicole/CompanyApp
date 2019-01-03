@@ -15,6 +15,7 @@
       return (
         <li className='list-group-item'>
           { user.name }
+	  { user.phrase }
           <button className='btn btn-danger' onClick={ ()=>  deleteUser(user.id)} style={{ float: 'right' }}>x</button>
         </li>
       );
@@ -31,7 +32,7 @@
         this.setState({ name: ev.target.value });
       }
       addUser = () => {
-        this.props.addUser({ name: this.state.name, id: faker.random.number()});
+        this.props.addUser({ name: this.state.name, id: faker.random.number(), phrase: faker.company.catchPrase});
         this.setState({ name: '' });
       }
       render(){
