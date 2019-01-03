@@ -5,4 +5,3 @@ import App from './App';
 
 const root = document.getElementById('root');
 ReactDOM.render(<App title='Company List'/>, root);
-
