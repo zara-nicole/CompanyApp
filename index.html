@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css' />
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  </head>
+  <body>
+    <div id='root' class='container'></div>
+    <script>
+      const User = ({ user })=>{
+        return React.createElement('li', { className: 'list-group-item' }, user.name );
+      }
+      const Users = ({ users })=> {
+        const listItems = users.map( user => React.createElement(User, { key: user.id, user }));
+        return React.createElement('ul', { className: 'list-group'}, listItems);
+      };
+
+      const App = ({ users})=> {
+        return React.createElement(Users, { users });
+      }
+
+      const users = [
+        { id: 1, name: 'moe' },
+        { id: 2, name: 'larry' },
+        { id: 3, name: 'curly' },
+      ];
+      const root = document.getElementById('root');
+ReactDOM.render(React.createElement(App, { users  }), root);
+    </script>
+  </body>
+</html>
